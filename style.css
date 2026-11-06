@@ -1,0 +1,105 @@
+/* Halloween Poem Website — Boulay_Halloween */
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 16px;
+  color: #2b1c22;
+  font-family: "Lora", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* Background image sits behind the entire page as an actual image element. */
+.background-art {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #211820;
+}
+.background-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f7eddf;
+  border: 2px solid #34242b;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.42);
+}
+.hero { width: 100%; background: #211820; }
+.hero-image {
+  display: block;
+  width: 100%;
+  height: clamp(190px, 32vw, 340px);
+  object-fit: cover;
+  object-position: center 48%;
+}
+.poem {
+  padding: 30px clamp(18px, 5vw, 64px) 36px;
+  text-align: center;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: #8b321f;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 0 0 8px;
+  color: #8b321f;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2.65rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.author {
+  margin: 8px 0 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+}
+.bio { margin: 4px 0 26px; }
+a { color: #873a25; text-underline-offset: 3px; }
+a:hover, a:focus { color: #4c1d16; }
+.poem-text {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.04rem;
+}
+.poem-text p { margin: 0; }
+.poem-text .stanza-gap { margin-top: 15px; }
+.poem-text .final-line { margin-top: 15px; font-style: italic; font-weight: 600; }
+.source {
+  margin: 28px 0 0;
+  padding-top: 17px;
+  border-top: 1px solid #c9b8a3;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: .88rem;
+}
+.image-credit { margin: 9px 0 0; color: #5d4a43; font-size: .78rem; }
+
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  .poem { padding: 24px 18px 28px; }
+  .poem-text { font-size: .97rem; }
+  .hero-image { height: 190px; }
+}
+@media (max-width: 399px) {
+  body { padding: 8px; }
+  .poem { padding: 20px 12px 24px; }
+  .hero-image { height: 160px; }
+}
